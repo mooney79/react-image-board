@@ -4,7 +4,7 @@ import ImageList from "./ImageList";
 
 function App() {
   const [photos, setPhotos] = useState([]);
-  // const [counter, setCounter] = useState(4);
+  const [counter, setCounter] = useState(4);
 
   useEffect( () => {
       setPhotos ([
@@ -21,11 +21,21 @@ function App() {
           loc: 'https://www.memesmonkey.com/images/memesmonkey/1f/1f3e7d06fab98d8d499bf0bfc630e203.jpeg',
           caption: 'God help you if you miss a parenthesis',
         }
-      ])}, []);
+  ])}, []);
+
+  function addPhoto(loc, caption) {
+    // {loc, caption} = newPhoto;
+    const photoToAdd = { id: counter, loc, caption};
+    setPhotos([...photos, photoToAdd]);
+    setCounter(counter + 1);
+    console.log(photos);
+  }
+
 
   return (
     <div className="App">
-      <ImageForm />
+      <h1>CODING MEMES</h1>
+      <ImageForm addPhoto={addPhoto}/>
       <ImageList photos={photos} />
     </div>
   );

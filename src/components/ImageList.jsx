@@ -1,11 +1,20 @@
 import ImageItem from "./ImageItem";
 
 function ImageList(props){
-    const ImagePane = props.photos.map(photo => <ImageItem key={photo.id} {...photo}/>);
+    const imagePane = props.photos.map(photo => <ImageItem key={photo.id} {...photo}/>);
     // {console.log(ImagePane)};
+
+    // function imageItem(photo){
+    //     return(<li>
+    //         <img src={props.loc} alt='' />
+    //         <p>{props.caption}</p>
+    //     </li>
+    //     )
+    // }
+
     return(
         <ul>
-            {ImagePane};
+            {imagePane};
         </ul>    
     )
 

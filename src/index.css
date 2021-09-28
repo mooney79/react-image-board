@@ -17,8 +17,8 @@ img {
   height: auto;
   border: 1px solid black;
   margin: 16px;
-  margin-bottom: 8px;
-  min-width: 300px;
+  margin-bottom: 4px;
+  min-width: 400px;
 }
 
 ul{
@@ -38,5 +38,24 @@ p {
 h1{
   text-align: center;
   font-size: 48px;
+  font-family: 'Courier M', monospace;
+  background-color: black;
+  color: green;
 
+}
+
+label{
+  display: inline-block;
+}
+
+input{
+  display: inline-block;
+}
+
+input::after{
+  content: '<br>';
+}
+
+form{
+  text-align: center;
 }

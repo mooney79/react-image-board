@@ -1,14 +1,41 @@
+import {useState} from 'react';
+
 function ImageForm(prop){
+
+    const [loc, setLoc] = useState('');
+    const [caption, setCaption] = useState('');
+
+    function handleSubmit(event){
+        event.preventDefault();
+        // const newPhoto = {loc, caption}
+        prop.addPhoto(loc, caption);
+        setLoc('');
+        setCaption('');
+    }
+
+    function handleNewLoc(event){
+        setLoc(event.target.value);
+    }
+
+    function handleNewCaption(event){
+        setCaption(event.target.value);
+    }
+
+
+
+
+
     return (
-        <div>
-           <h1>CODING MEMES</h1>
-            <p>Enter the URL of a new meme to add it to your collection:</p>
-            <form>
-               <input type="text">
-               </input> 
-               <button type="submit">Add</button>
-            </form>
-        </div>
+        <form onSubmit={handleSubmit}>           
+            <label htmlFor="loc">Enter the URL of a new meme to add it to the collection:</label>
+            <input id="loc" name="loc" type="text" value={loc} onChange={handleNewLoc} autoComplete="off" /> <br/>
+            <label htmlFor="caption"> Don't forget the caption! </label>
+            <input id="caption" name="caption" type="text" value={caption} onChange={handleNewCaption} autoComplete="off" /> <br/>
+            <button type="submit">Add</button>
+
+
+
+        </form>
     )
 }
 
