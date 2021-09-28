@@ -1,8 +1,8 @@
 function ImageForm(prop){
     return (
         <div>
-           <h1>The Image Place</h1>
-            Enter the URL of a photo to add it to your collection:
+           <h1>CODING MEMES</h1>
+            <p>Enter the URL of a new meme to add it to your collection:</p>
             <form>
                <input type="text">
                </input> 

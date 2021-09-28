@@ -1,9 +1,8 @@
-function ImageItem(prop){
+function ImageItem(props){
     return (
         <li>
-            <img></img>
-            Placeholder stuff
-            <caption></caption>
+                <img src={props.loc} alt='' />
+                <p>{props.caption}</p>
         </li>
     )
 }
