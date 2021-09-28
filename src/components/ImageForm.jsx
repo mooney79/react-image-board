@@ -27,11 +27,11 @@ function ImageForm(prop){
 
     return (
         <form onSubmit={handleSubmit}>           
-            <label htmlFor="loc">Enter the URL of a new meme to add it to the collection:</label>
-            <input id="loc" name="loc" type="text" value={loc} onChange={handleNewLoc} autoComplete="off" /> <br/>
-            <label htmlFor="caption"> Don't forget the caption! </label>
-            <input id="caption" name="caption" type="text" value={caption} onChange={handleNewCaption} autoComplete="off" /> <br/>
-            <button type="submit">Add</button>
+            {/* <label htmlFor="loc">Enter the URL of a new meme to add it to the collection:</label> */}
+            <input id="loc" name="loc" type="text" value={loc} onChange={handleNewLoc} autoComplete="off" placeholder="New Meme URL:"/> <br/>
+            {/* <label htmlFor="caption"> Don't forget the caption! </label> */}
+            <input id="caption" name="caption" type="text" value={caption} onChange={handleNewCaption} autoComplete="off" placeholder="Enter your caption here:"/> <br/>
+            <button id="addPhotoButton"type="submit"><i className="far fa-file-image"></i> &nbsp; ADD A MEME</button>
 
 
 
